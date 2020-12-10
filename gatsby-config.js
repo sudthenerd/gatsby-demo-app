@@ -4,7 +4,7 @@ module.exports = {
     description: "This is description of gatsby Project created by sudthenerd",
     keywords: 'gatsby, gatsbyjs project, sudthenerdGatsbyProject',
     image: '/static/gatsby.jpg',
-    url: 'https://www.gatsbyjs.org/'
+    url: 'http://www.expertstmp.com/'
   },
   plugins: [
     {
