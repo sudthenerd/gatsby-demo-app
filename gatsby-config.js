@@ -1,3 +1,7 @@
+require(`dotenv`).config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "Gatsby-Bootstrap",
@@ -7,6 +11,17 @@ module.exports = {
     url: 'http://www.expertstmp.com/'
   },
   plugins: [
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: `GitHub`,
+        fieldName: `github`,
+        url: `https://api.github.com/graphql`,
+        headers: {
+          Authorization: `Bearer 11e7551f9310601ac08fbfae42836155efe51af4`,
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
